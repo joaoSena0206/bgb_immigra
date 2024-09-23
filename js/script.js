@@ -31,8 +31,6 @@ function trocarTexto(indice, novoIndice, div, direcao) {
 }
 
 
-let servicos = ["Immigration", "Visas", "Documents", "Legal", "Support and Consulting"];
-
 const setaDireita = document.querySelector(".div_setas__img--seta_direita");
 const setaEsquerda = document.querySelector(".div_setas__img--seta_esquerda");
 const divServico = document.querySelectorAll(".div_servicos2");
@@ -42,6 +40,18 @@ const idiomaSelect = new Choices('#idioma-select', {
     searchEnabled: false,
     itemSelectText: '',
 });
+const html = document.querySelector("html");
+
+let servicos = ["Immigration", "Visas", "Documents", "Legal", "Support and Consulting"];
+
+if (html.lang == "pt-br") {
+    servicos = ["Imigração", "Vistos", "Documentos", "Jurídico", "Suporte e Consultoria"];
+}
+else if (html.lang == "es-es") {
+    servicos = ["Inmigración", "Visas", "Documentos", "Legal", "Soporte y Consultoría"];
+}
+
+
 select.addEventListener("change", function () {
     const idioma = select.value.toLowerCase();
 
