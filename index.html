@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
 
     <title>BGB Immigra & Solutions</title>
@@ -24,13 +27,21 @@
             </div>
 
             <div class="div_idioma">
-                <figure>
-                    <img class="div_idioma__img" src="imgs/mundo.svg" alt="Idioma">
-                </figure>
-                <p class="div_idioma__p">PT-BR</p>
-                <figure>
-                    <img class="div_idioma__img--seta" src="imgs/seta_baixo.svg" alt="Seta para baixo">
-                </figure>
+                <div style="display: flex; align-items: center;">
+                    <figure style="margin-right: 5px;">
+                        <img class="div_idioma__img" src="imgs/mundo.svg" alt="Idioma">
+                    </figure>
+                    <div class="dropdown" style="display: flex; align-items: center;">
+                        <select id="idioma-select">
+                            <option selected>PT-BR</option>
+                            <option>ES-ES</option>
+                            <option>EN-US</option>
+                        </select>
+                        <!--  <figure>
+                            <img class="div_idioma__img--seta" src="imgs/seta_baixo.svg" alt="Seta para baixo">
+                        </figure> -->
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -146,7 +157,7 @@
                     <div class="div_frequente_info">
                         <h3 class="div_frequente__h3">EB2-NIW - Trabalhadores de Interesse Nacional</h3>
                         <p>Você é um profissional com diploma ou posição de destaque em seu país de origem? Em caso
-                            afirmativo, esse pode ser a sua solução imigratória para morar nos EUA</p>
+                            afirmativo, essa pode ser a sua solução imigratória para morar nos EUA</p>
                     </div>
                 </div>
 
@@ -157,7 +168,7 @@
 
                     <div class="div_frequente_info">
                         <h3 class="div_frequente__h3">Extensão do visto americano</h3>
-                        <p>Maneira mais fácil e rápida para quem defesa ficar mais tempo nos EUA. Saiba que podemos te
+                        <p>Maneira mais fácil e rápida para quem deseja ficar mais tempo nos EUA. Saiba que podemos te
                             ajudar!</p>
                     </div>
                 </div>
@@ -183,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="div_servicos2" id="servico_0">
+                <div class="div_servicos2" id="servico_0" style="display: flex;">
                     <div class="div_servico">
                         <h4 class="div_servico__h4">Regularização ou Ajuste de Status</h4>
                         <p>Auxiliamos na legalização de sua permanência nos EUA, garantindo todos os documentos
