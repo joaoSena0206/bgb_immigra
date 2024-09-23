@@ -31,12 +31,30 @@ function trocarTexto(indice, novoIndice, div, direcao) {
 }
 
 
-let servicos = ["Imigração", "Vistos", "Documentos", "Jurídicos", "Suporte e Consultoria"];
+let servicos = ["Immigration", "Visas", "Documents", "Legal", "Support and Consulting"];
 
 const setaDireita = document.querySelector(".div_setas__img--seta_direita");
 const setaEsquerda = document.querySelector(".div_setas__img--seta_esquerda");
 const divServico = document.querySelectorAll(".div_servicos2");
 const titulo_servico = document.querySelector("#titulo_servico");
+const select = document.querySelector("#idioma-select");
+const idiomaSelect = new Choices('#idioma-select', {
+    searchEnabled: false,
+    itemSelectText: '',
+});
+select.addEventListener("change", function () {
+    const idioma = select.value.toLowerCase();
+
+    if (idioma == "pt-br") {
+        window.location = "index.html";
+    }
+    else if (idioma == "en-us") {
+        window.location = "index_en-us.html";
+    }
+    else if (idioma == "es-es") {
+        window.location = "index_es-es.html";
+    }
+});
 
 setaDireita.addEventListener("click", function () {
     for (let i = 0; i < servicos.length; i++) {
@@ -72,9 +90,3 @@ setaEsquerda.addEventListener("click", function () {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const idiomaSelect = new Choices('#idioma-select', {
-        searchEnabled: false,  
-        itemSelectText: '',    
-    });
-});
