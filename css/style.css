@@ -239,6 +239,7 @@ header {
 
 .section_servicos {
     padding: 50px 30px;
+    overflow-x: hidden;
 }
 
 .div_setas {
