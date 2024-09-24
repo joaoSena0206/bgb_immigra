@@ -492,7 +492,7 @@ header {
     /* SECTION INICIAL */
 
     .section_inicial {
-        background: url(../imgs/fundo.jpg);
+        background: url(../imgs/fundo.jpeg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
